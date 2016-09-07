@@ -19,7 +19,7 @@
   - Evaluation will be done lazily.
   - Evaluation might be omitted; if Haskell already knows the result from previous run of the same evaluation Haskell may reuse it.
   - Evaluation might be done by looking up a table; e.g., referencing trigonometric tables for sine and cosine functions.
-  - Evaluation is not done in a specific order and might be done concurrently, unless the case has a predefined rule such as precedence or associativity or the case involves a function result being used as an argument for another function.
+  - Evaluation does not have a specific order and might be done even concurrently, unless the case has a predefined rule such as precedence or associativity or the case involves a function result being used as an argument for another function.
 - Execution: IO actions are executed at runtime
   - Execution is done only on the evaluated result of `main`, nowhere else.
   - The `main` should be defined of type `main :: IO ()`.
